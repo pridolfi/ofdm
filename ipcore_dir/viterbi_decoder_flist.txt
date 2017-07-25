@@ -1,0 +1,13 @@
+# Output products list for <viterbi_decoder>
+_xmsgs/pn_parser.xmsgs
+viterbi_decoder.asy
+viterbi_decoder.gise
+viterbi_decoder.ngc
+viterbi_decoder.sym
+viterbi_decoder.vhd
+viterbi_decoder.vho
+viterbi_decoder.xco
+viterbi_decoder.xise
+viterbi_decoder_flist.txt
+viterbi_decoder_readme.txt
+viterbi_decoder_xmdf.tcl

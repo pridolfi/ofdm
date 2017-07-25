@@ -1,0 +1,15 @@
+# Output products list for <conv_encoder>
+_xmsgs/pn_parser.xmsgs
+conv_encoder/doc/convolution_ds248.pdf
+conv_encoder/doc/convolution_v7_0_vinfo.html
+conv_encoder.asy
+conv_encoder.gise
+conv_encoder.ngc
+conv_encoder.sym
+conv_encoder.vhd
+conv_encoder.vho
+conv_encoder.xco
+conv_encoder.xise
+conv_encoder_flist.txt
+conv_encoder_readme.txt
+conv_encoder_xmdf.tcl
