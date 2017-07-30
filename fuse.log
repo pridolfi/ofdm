@@ -1,23 +1,31 @@
-Running: /home/fsl/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/fsl/MSE/PdS3/ofdm/mapper_tb_isim_beh.exe" -prj "/home/fsl/MSE/PdS3/ofdm/mapper_tb_beh.prj" "work.mapper_tb" 
+Running: /home/pablo/programas/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/pablo/work/sdc/tp_final/ofdm/cordic_tb_isim_beh.exe" -prj "/home/pablo/work/sdc/tp_final/ofdm/cordic_tb_beh.prj" "work.cordic_tb" 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "/home/fsl/MSE/PdS3/ofdm/mapper.vhd" into library work
-Parsing VHDL file "/home/fsl/MSE/PdS3/ofdm/mapper_tb.vhd" into library work
+Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/cordic_iter.vhd" into library work
+Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/cordic.vhd" into library work
+Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/cordic_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 96780 KB
-Fuse CPU Usage: 1370 ms
+Fuse Memory Usage: 96924 KB
+Fuse CPU Usage: 1420 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
-Compiling architecture mapper_arch of entity mapper [mapper_default]
-Compiling architecture behavior of entity mapper_tb
+Compiling architecture behavioral of entity cordic_iter [\cordic_iter(16,0)\]
+Compiling architecture behavioral of entity cordic_iter [\cordic_iter(16,1)\]
+Compiling architecture behavioral of entity cordic_iter [\cordic_iter(16,2)\]
+Compiling architecture behavioral of entity cordic_iter [\cordic_iter(16,3)\]
+Compiling architecture behavioral of entity cordic_iter [\cordic_iter(16,4)\]
+Compiling architecture behavioral of entity cordic_iter [\cordic_iter(16,5)\]
+Compiling architecture behavioral of entity cordic_iter [\cordic_iter(16,6)\]
+Compiling architecture behavioral of entity cordic_iter [\cordic_iter(16,7)\]
+Compiling architecture behavioral of entity cordic [\cordic(16,8)\]
+Compiling architecture behavior of entity cordic_tb
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 6 VHDL Units
-Built simulation executable /home/fsl/MSE/PdS3/ofdm/mapper_tb_isim_beh.exe
-Fuse Memory Usage: 668424 KB
-Fuse CPU Usage: 1460 ms
-GCC CPU Usage: 140 ms
+Compiled 22 VHDL Units
+Built simulation executable /home/pablo/work/sdc/tp_final/ofdm/cordic_tb_isim_beh.exe
+Fuse Memory Usage: 668948 KB
+Fuse CPU Usage: 1540 ms
+GCC CPU Usage: 210 ms

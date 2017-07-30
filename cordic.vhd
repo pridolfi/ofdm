@@ -145,7 +145,6 @@ begin
 		
 			when RESET_S=>
 			
-			ena_input<='0';
 			ena_output<='0';
 			rst_input<='1';
 			rst_output<='1';
@@ -153,6 +152,9 @@ begin
 						
 			if (valid_in='1') then
 				fsmState_next<=INPUT_S;
+				ena_input<='1';
+			else
+				ena_input<='0';
 			end if;
 	
 			when INPUT_S=>
