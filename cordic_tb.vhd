@@ -92,8 +92,12 @@ BEGIN
 		valid_in <= '0';
 		wait for 100 ns;
 		rst <= '0';
-		wait for 100 ns;
-		wait until clk = '1';
+		
+		wait until clk='0';
+		wait until clk='1';
+		
+		wait for clk_period*10;
+
 		
 		-- 1st quad
       

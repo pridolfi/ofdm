@@ -77,127 +77,62 @@ constant atanLUT : atanLUT_t := (
 
 	--Registro de entrada
 	signal x_reg,y_reg : std_logic_vector (7 downto 0);
-	signal ena_input,rst_input: std_logic;
-	
+	signal valid_reg : std_logic;
+
 	--Registro de salida
 	signal z_reg : std_logic_vector (3 downto 0);
-	signal ena_output,rst_output: std_logic;
 	
-	--Maquina de estados
-	type fsmState_t IS (RESET_S,INPUT_S,LOAD_OUT_S,OUT_S);
-	signal fsmState,fsmState_next : fsmState_t :=RESET_S;
+	
 
 begin
 	
 	--Registro de entrada
-	process(clk,rst_input,ena_input)
+	process(clk,rst)
 	begin
 	
 		if (clk'event and clk='1')
 		then
-			if (rst_input='1')
+			if (rst='1')
 			then
 				x_reg<= (others=> '0');
 			   y_reg<= (others=> '0');
-			elsif (ena_input='1')
+				valid_reg <= '0';
+				
+			elsif (valid_in='1')
 			then
 				x_reg<= x0;
-				y_reg<= y0;
+				y_reg<= y0; 
+				valid_reg<= valid_in;
+			elsif (valid_in='0')
+			then
+				valid_reg<='0';
 			end if;
 		end if;
 	end process;
 	
 	--Registro de salida
 	
-	process(clk,ena_output,rst_output)
+	process(clk,rst)
 	begin
 	
 		if (clk'event and clk='1')
 		then
-			if (rst_output='1')
+			if (rst='1')
 			then
 				zn<= (others=> '0');
-			elsif (ena_output='1')
+			   valid_out <= '0';
+				
+			elsif (valid_reg='1')
 			then
-				zn<=z_reg;
+				zn <= z_reg;
+				valid_out<= valid_reg;
+			elsif (valid_reg='0')
+			then
+				valid_out<='0';
 			end if;
 		end if;
 	end process;
 	
-	--Descripciòn de la actualizacion de la maquina
-	process(clk,rst)
-		begin
-
-			if (rst='1') then
-				fsmState<=RESET_S;
-					
-			elsif (clk'event and clk='1') then
-				fsmState<=fsmState_next;
-			end if;
-	end process;
-	
-	--Descripcion de la logica de conmutacion de estados
-	process(fsmState,valid_in)
-		begin
-		fsmState_next<=fsmState;
-		
-		case fsmState is
-		
-			when RESET_S=>
-			
-			ena_output<='0';
-			rst_input<='1';
-			rst_output<='1';
-			valid_out<='0';
-						
-			if (valid_in='1') then
-				fsmState_next<=INPUT_S;
-				ena_input<='1';
-			else
-				ena_input<='0';
-			end if;
-	
-			when INPUT_S=>
-			
-			ena_input<='1';
-			ena_output<='0';
-			rst_input<='0';
-			rst_output<='0';
-			valid_out<='0';
-						
-			if (valid_in='1') then
-				fsmState_next<=LOAD_OUT_S;
-			else
-				fsmState_next<=OUT_S;
-			end if;
-			
-			when LOAD_OUT_S=>
-			
-			ena_input<='1';
-			ena_output<='1';
-			rst_input<='0';
-			rst_output<='0';
-			valid_out<='1';
-						
-			if (valid_in='0') then
-				fsmState_next<=OUT_S;
-			end if;
-			
-			
-			when OUT_S=>
-			
-			ena_input<='0';
-			ena_output<='1';
-			rst_input<='0';
-			rst_output<='0';
-			valid_out<='1';
-						
-			fsmState_next<=RESET_S;
-			
-		end case;
-		
-	end process;
-
 	quadrant_correction:
 	x0in(7 downto 0) <= x_reg when (signed(x_reg) >= 0) else
 		     y_reg when (signed(y_reg) >= 0) else

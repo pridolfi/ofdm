@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/pablo/work/sdc/tp_final/ofdm/cordic_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/pablo/work/sdc/tp_final/ofdm/cordic_tb_isim_beh.wdb 
+Running: /home/fsl/MSE/PdS3/ofdm/cordic_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/fsl/MSE/PdS3/ofdm/cordic_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 This is a Full version of ISim.
 Time resolution is 1 ps
@@ -98,9 +98,9 @@ at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-# restart
-# restart
-# run 10us
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 1000 ns
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
@@ -194,7 +194,7 @@ at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 # restart
-# run 10us
+# run 1.00us
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
@@ -287,102 +287,9 @@ at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-# restart
-# run 10us
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-Finished circuit initialization process.
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-# restart
-# run 10us
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 1000 ns
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
@@ -571,7 +478,7 @@ at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 # restart
-# run 10us
+# run 1.00us
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
@@ -760,7 +667,7 @@ at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 # restart
-# run 10us
+# run 1.00us
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
@@ -949,7 +856,7 @@ at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 # restart
-# run 10us
+# run 1.00us
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
@@ -1138,7 +1045,7 @@ at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 # restart
-# run 10us
+# run 1.00us
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
@@ -1232,7 +1139,7 @@ at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 # restart
-# run 10us
+# run 1.00us
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
@@ -1421,385 +1328,7 @@ at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
 # restart
-# run 10us
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-Finished circuit initialization process.
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-ISim P.20131013 (signature 0xfbc00daa)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-Finished circuit initialization process.
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-# restart
-# run 10us
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-Finished circuit initialization process.
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-ISim P.20131013 (signature 0xfbc00daa)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-Finished circuit initialization process.
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(0)\/it0/iter0/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(1)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(2)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(3)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(4)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(5)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(6)\/itj/iterj/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-at 0 ps, Instance /cordic_tb/uut/\generic_inst(7)\/itm_1/iterM_1/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-# restart
-# run 10us
+# run 1.00us
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
 at 0 ps, Instance /cordic_tb/uut/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
