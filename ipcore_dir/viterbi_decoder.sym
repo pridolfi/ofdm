@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="viterbi_decoder">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2017-7-25T0:12:25</timestamp>
+    <timestamp>2017-7-30T18:54:0</timestamp>
     <pin polarity="Input" x="0" y="80" name="data_in0[0:0]" />
     <pin polarity="Input" x="0" y="112" name="data_in1[0:0]" />
     <pin polarity="Input" x="0" y="912" name="ce" />

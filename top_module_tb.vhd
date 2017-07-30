@@ -68,8 +68,8 @@ ARCHITECTURE behavior OF top_module_tb IS
    signal f2hValid_in : std_logic;
 
    -- Clock period definitions
-   constant fx2_clk_period : time := 10 ns;
-   constant clk_system_period : time := 10 ns;
+   constant fx2_clk_period : time := 22 ns;
+   constant clk_system_period : time := 20 ns;
  
 BEGIN
  
@@ -108,12 +108,145 @@ BEGIN
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
+		fx2_rst<='1';
+		f2hValid_in<='0';
+		
       wait for 100 ns;	
-
-      wait for fx2_clk_period*10;
-
-      -- insert stimulus here 
-
+		
+		fx2_rst<='0';
+		
+		wait for 100 ns;	
+		
+		h2fData_out<="11111111";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="10101010";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01010101";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01101001";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="11111111";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="10101010";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01010101";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01101001";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+	
+		h2fData_out<="11111111";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="10101010";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01010101";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01101001";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="11111111";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="10101010";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01010101";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01101001";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="11111111";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="10101010";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01010101";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01101001";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="11111111";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="10101010";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01010101";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01101001";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+	
+		h2fData_out<="11111111";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="10101010";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01010101";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01101001";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="11111111";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="10101010";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01010101";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01101001";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+	
+		h2fValid_out<='0';
+ 
       wait;
    end process;
 

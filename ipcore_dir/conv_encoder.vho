@@ -56,6 +56,7 @@ component conv_encoder
 	port (
 	data_in: in std_logic;
 	data_out_v: out std_logic_vector(1 downto 0);
+	nd: in std_logic;
 	rdy: out std_logic;
 	ce: in std_logic;
 	sclr: in std_logic;
@@ -72,6 +73,7 @@ your_instance_name : conv_encoder
 		port map (
 			data_in => data_in,
 			data_out_v => data_out_v,
+			nd => nd,
 			rdy => rdy,
 			ce => ce,
 			sclr => sclr,

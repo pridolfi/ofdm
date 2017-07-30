@@ -89,6 +89,7 @@ architecture top_module_arch of top_module is
 			data_in    : in  std_logic;
 			data_out_v : out std_logic_vector(1 downto 0);
 			rdy        : out std_logic;
+			nd			  : in std_logic;
 			ce         : in  std_logic;
 			sclr       : in  std_logic;
 			clk        : in  std_logic);
@@ -129,7 +130,7 @@ architecture top_module_arch of top_module is
 begin
 
 	clk_s<=clk_system;
-
+	rst_s<=fx2_rst;
 	-- INSTANCIACION DE COMPONENTES
 
 	--FIFO DE ENTRADA
@@ -174,7 +175,8 @@ begin
 			data_in    => conv_in_s(0),
 			data_out_v => conv_data_out_s,
 			rdy        => rdy_conv_s,
-			ce         => conv_ce_s,
+			nd => conv_ce_s,
+			ce         => '1',
 			sclr       => rst_s,
 			clk        => clk_s
 		);
@@ -193,6 +195,8 @@ begin
 
 	viterbi_data_in0(0)<=conv_data_out_s(0);
 	viterbi_data_in1(0)<=conv_data_out_s(1);
+	
+	h2fReady_in<='1';
 
 end top_module_arch;
 

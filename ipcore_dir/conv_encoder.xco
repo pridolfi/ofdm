@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Mon Jul 24 23:38:29 2017
+# Date: Sun Jul 30 18:07:10 2017
 #
 ##############################################################
 #
@@ -52,7 +52,7 @@ CSET convolution_code6=0000011
 CSET dual_output=false
 CSET fd_in=false
 CSET input_rate=1
-CSET nd=false
+CSET nd=true
 CSET output_rate=2
 CSET puncture_code0=0
 CSET puncture_code1=0
@@ -66,4 +66,4 @@ CSET synchronous_clear=true
 MISC pkg_timestamp=2013-10-13T18:23:30Z
 # END Extra information
 GENERATE
-# CRC: 6ca66eee
+# CRC: c86e9620
