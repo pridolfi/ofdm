@@ -35,7 +35,8 @@ generic (N : natural := 16;
 			ITER : natural := 8 );
 			
 port (clk : in std_logic;
-		rst : in std_logic;
+		rst,valid_in : in std_logic;
+		valid_out : out std_logic;
 		x0  : in std_logic_vector (7 downto 0);
 		y0  : in std_logic_vector (7 downto 0);
 		zn  : out std_logic_vector (3 downto 0));
@@ -74,23 +75,143 @@ constant atanLUT : atanLUT_t := (
 	std_logic_vector(to_unsigned(0  ,N))
 	);
 
+	--Registro de entrada
+	signal x_reg,y_reg : std_logic_vector (7 downto 0);
+	signal ena_input,rst_input: std_logic;
+	
+	--Registro de salida
+	signal z_reg : std_logic_vector (3 downto 0);
+	signal ena_output,rst_output: std_logic;
+	
+	--Maquina de estados
+	type fsmState_t IS (RESET_S,INPUT_S,LOAD_OUT_S,OUT_S);
+	signal fsmState,fsmState_next : fsmState_t :=RESET_S;
+
 begin
+	
+	--Registro de entrada
+	process(clk,rst_input,ena_input)
+	begin
+	
+		if (clk'event and clk='1')
+		then
+			if (rst_input='1')
+			then
+				x_reg<= (others=> '0');
+			   y_reg<= (others=> '0');
+			elsif (ena_input='1')
+			then
+				x_reg<= x0;
+				y_reg<= y0;
+			end if;
+		end if;
+	end process;
+	
+	--Registro de salida
+	
+	process(clk,ena_output,rst_output)
+	begin
+	
+		if (clk'event and clk='1')
+		then
+			if (rst_output='1')
+			then
+				zn<= (others=> '0');
+			elsif (ena_output='1')
+			then
+				zn<=z_reg;
+			end if;
+		end if;
+	end process;
+	
+	--Descripciòn de la actualizacion de la maquina
+	process(clk,rst)
+		begin
+
+			if (rst='1') then
+				fsmState<=RESET_S;
+					
+			elsif (clk'event and clk='1') then
+				fsmState<=fsmState_next;
+			end if;
+	end process;
+	
+	--Descripcion de la logica de conmutacion de estados
+	process(fsmState,valid_in)
+		begin
+		fsmState_next<=fsmState;
+		
+		case fsmState is
+		
+			when RESET_S=>
+			
+			ena_input<='0';
+			ena_output<='0';
+			rst_input<='1';
+			rst_output<='1';
+			valid_out<='0';
+						
+			if (valid_in='1') then
+				fsmState_next<=INPUT_S;
+			end if;
+	
+			when INPUT_S=>
+			
+			ena_input<='1';
+			ena_output<='0';
+			rst_input<='0';
+			rst_output<='0';
+			valid_out<='0';
+						
+			if (valid_in='1') then
+				fsmState_next<=LOAD_OUT_S;
+			else
+				fsmState_next<=OUT_S;
+			end if;
+			
+			when LOAD_OUT_S=>
+			
+			ena_input<='1';
+			ena_output<='1';
+			rst_input<='0';
+			rst_output<='0';
+			valid_out<='1';
+						
+			if (valid_in='0') then
+				fsmState_next<=OUT_S;
+			end if;
+			
+			
+			when OUT_S=>
+			
+			ena_input<='0';
+			ena_output<='1';
+			rst_input<='0';
+			rst_output<='0';
+			valid_out<='1';
+						
+			fsmState_next<=RESET_S;
+			
+		end case;
+		
+	end process;
+
 	quadrant_correction:
-	x0in(7 downto 0) <= x0 when (signed(x0) >= 0) else
-		     y0 when (signed(y0) >= 0) else
-			  std_logic_vector(unsigned(not(y0)) + 1);
+	x0in(7 downto 0) <= x_reg when (signed(x_reg) >= 0) else
+		     y_reg when (signed(y_reg) >= 0) else
+			  std_logic_vector(unsigned(not(y_reg)) + 1);
 	
 	x0in(N-1 downto 8) <= (others => '0') when (x0in(7) = '0') else
 								 (others => '1');
 
-	y0in(7 downto 0) <= y0 when (signed(x0) >= 0) else
-		     std_logic_vector(unsigned(not(x0)) + 1) when (signed(y0)>=0) else
-		     x0;
+	y0in(7 downto 0) <= y_reg when (signed(x_reg) >= 0) else
+		     std_logic_vector(unsigned(not(x_reg)) + 1) when (signed(y_reg)>=0) else
+		     x_reg;
 	y0in(N-1 downto 8) <= (others => '0') when (y0in(7) = '0') else
 	                      (others => '1');
 	
-	offset <= std_logic_vector(to_signed(201,N)) when  ((signed(x0)<0) and (signed(y0)>=0)) else
-		       std_logic_vector(to_signed(-201,N)) when ((signed(x0)<0) and (signed(y0)<0)) else
+	offset <= std_logic_vector(to_signed(201,N)) when  ((signed(x_reg)<0) and (signed(y_reg)>=0)) else
+		       std_logic_vector(to_signed(-201,N)) when ((signed(x_reg)<0) and (signed(y_reg)<0)) else
 				 (others => '0');
 	
 	generic_inst:
@@ -151,7 +272,7 @@ begin
 	
 	index <= std_logic_vector(signed(znout) + signed(offset));
 	
-	zn <= "0000" when ((signed(index) >= 0) and (signed(index) < 50)) else
+	z_reg <= "0000" when ((signed(index) >= 0) and (signed(index) < 50)) else
 			"0001" when ((signed(index) >= 50) and (signed(index) < 100)) else
 			"0010" when ((signed(index) >= 100) and (signed(index) < 150)) else
 			"0011" when ((signed(index) >= 150) and (signed(index) < 200)) else
