@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/fsl/MSE/PdS3/ofdm/top_module_tb_isim_beh.exe" -prj "/home/fsl/MSE/PdS3/ofdm/top_module_tb_beh.prj" "work.top_module_tb" 
+-intstyle "ise" -incremental -o "/home/fsl/MSE/PdS3/ofdm/mapper_tb_isim_beh.exe" -prj "/home/fsl/MSE/PdS3/ofdm/mapper_tb_beh.prj" "work.mapper_tb" 
