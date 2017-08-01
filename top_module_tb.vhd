@@ -44,6 +44,7 @@ ARCHITECTURE behavior OF top_module_tb IS
          fx2_clk : IN  std_logic;
          fx2_rst : IN  std_logic;
          clk_system : IN  std_logic;
+			clk2x_system : IN  std_logic;
          h2fData_out : IN  std_logic_vector(7 downto 0);
          h2fValid_out : IN  std_logic;
          h2fReady_in : OUT  std_logic;
@@ -58,6 +59,7 @@ ARCHITECTURE behavior OF top_module_tb IS
    signal fx2_clk : std_logic := '0';
    signal fx2_rst : std_logic := '0';
    signal clk_system : std_logic := '0';
+	signal clk2x_system : std_logic := '0';
    signal h2fData_out : std_logic_vector(7 downto 0) := (others => '0');
    signal h2fValid_out : std_logic := '0';
    signal f2hReady_out : std_logic := '0';
@@ -70,6 +72,7 @@ ARCHITECTURE behavior OF top_module_tb IS
    -- Clock period definitions
    constant fx2_clk_period : time := 22 ns;
    constant clk_system_period : time := 20 ns;
+	constant clk2x_system_period : time := clk_system_period/2;
  
 BEGIN
  
@@ -78,6 +81,7 @@ BEGIN
           fx2_clk => fx2_clk,
           fx2_rst => fx2_rst,
           clk_system => clk_system,
+			 clk2x_system => clk2x_system,
           h2fData_out => h2fData_out,
           h2fValid_out => h2fValid_out,
           h2fReady_in => h2fReady_in,
@@ -103,6 +107,13 @@ BEGIN
 		wait for clk_system_period/2;
    end process;
  
+    clk2x_system_process :process
+   begin
+		clk2x_system <= '0';
+		wait for clk2x_system_period/2;
+		clk2x_system <= '1';
+		wait for clk2x_system_period/2;
+   end process;
 
    -- Stimulus process
    stim_proc: process
@@ -117,133 +128,133 @@ BEGIN
 		
 		wait for 100 ns;	
 		
-		h2fData_out<="11111111";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
 		h2fData_out<="10101010";
 		h2fValid_out<='1';
 		wait for fx2_clk_period;
 		
-		h2fData_out<="01010101";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01101001";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="11111111";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="10101010";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01010101";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01101001";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-	
-		h2fData_out<="11111111";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="10101010";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01010101";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01101001";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="11111111";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="10101010";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01010101";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01101001";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="11111111";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="10101010";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01010101";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01101001";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="11111111";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="10101010";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01010101";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01101001";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-	
-		h2fData_out<="11111111";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="10101010";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01010101";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01101001";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="11111111";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="10101010";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01010101";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01101001";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
+--		h2fData_out<="10101010";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="01010101";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="01101001";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="11111111";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="10101010";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="01010101";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="01101001";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--	
+--		h2fData_out<="11111111";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="10101010";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="01010101";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="01101001";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="11111111";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="10101010";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="01010101";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="01101001";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="11111111";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="10101010";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="01010101";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="01101001";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="11111111";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="10101010";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="01010101";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="01101001";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--	
+--		h2fData_out<="11111111";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="10101010";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="01010101";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="01101001";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="11111111";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="10101010";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="01010101";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
+--		
+--		h2fData_out<="01101001";
+--		h2fValid_out<='1';
+--		wait for fx2_clk_period;
 	
 		h2fValid_out<='0';
  

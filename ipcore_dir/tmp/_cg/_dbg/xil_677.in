@@ -1,0 +1,56 @@
+SET_FLAG DEBUG FALSE
+SET_FLAG MODE INTERACTIVE
+SET_FLAG STANDALONE_MODE FALSE
+SET_PREFERENCE devicefamily spartan3e
+SET_PREFERENCE device xc3s500e
+SET_PREFERENCE speedgrade -4
+SET_PREFERENCE package fg320
+SET_PREFERENCE verilogsim false
+SET_PREFERENCE vhdlsim true
+SET_PREFERENCE simulationfiles Behavioral
+SET_PREFERENCE busformat BusFormatAngleBracketNotRipped
+SET_PREFERENCE outputdirectory /home/fsl/MSE/PdS3/ofdm/ipcore_dir/
+SET_PREFERENCE workingdirectory /home/fsl/MSE/PdS3/ofdm/ipcore_dir/tmp/
+SET_PREFERENCE subworkingdirectory /home/fsl/MSE/PdS3/ofdm/ipcore_dir/tmp/_cg/
+SET_PREFERENCE transientdirectory /home/fsl/MSE/PdS3/ofdm/ipcore_dir/tmp/_cg/_dbg/
+SET_PREFERENCE designentry VHDL
+SET_PREFERENCE flowvendor Other
+SET_PREFERENCE addpads false
+SET_PREFERENCE projectname coregen
+SET_PREFERENCE formalverification false
+SET_PREFERENCE asysymbol false
+SET_PREFERENCE implementationfiletype Ngc
+SET_PREFERENCE foundationsym false
+SET_PREFERENCE createndf false
+SET_PREFERENCE removerpms false
+SET_PARAMETER Component_Name conv_encoder
+SET_PARAMETER Punctured false
+SET_PARAMETER Input_Rate 1
+SET_PARAMETER Output_Rate 2
+SET_PARAMETER Puncture_Code0 0
+SET_PARAMETER Puncture_Code1 0
+SET_PARAMETER Constraint_Length 7
+SET_PARAMETER Convolution_Code0 1111001
+SET_PARAMETER Convolution_Code1 1011011
+SET_PARAMETER Convolution_Code2 0000011
+SET_PARAMETER Convolution_Code3 0000011
+SET_PARAMETER Convolution_Code4 0000011
+SET_PARAMETER Convolution_Code5 0000011
+SET_PARAMETER Convolution_Code6 0000011
+SET_PARAMETER Dual_Output false
+SET_PARAMETER ND true
+SET_PARAMETER RFD false
+SET_PARAMETER FD_IN false
+SET_PARAMETER RFFD false
+SET_PARAMETER RDY true
+SET_PARAMETER Synchronous_Clear true
+SET_PARAMETER CE true
+SET_CORE_NAME Convolution Encoder
+SET_CORE_VERSION 7.0
+SET_CORE_VLNV xilinx.com:ip:convolution:7.0
+SET_CORE_CLASS com.xilinx.ip.convolution_v7_0.convolution_v7_0
+SET_CORE_PATH /home/fsl/Xilinx/14.7/ISE_DS/ISE/coregen/ip/xilinx/dsp/com/xilinx/ip/convolution_v7_0
+SET_CORE_GUIPATH /home/fsl/Xilinx/14.7/ISE_DS/ISE/coregen/ip/xilinx/dsp/com/xilinx/ip/convolution_v7_0/gui/convolution_v7_0.tcl
+SET_CORE_DATASHEET /home/fsl/Xilinx/14.7/ISE_DS/ISE/coregen/ip/xilinx/dsp/com/xilinx/ip/convolution_v7_0/doc/convolution_ds248.pdf
+ADD_CORE_DOCUMENT </home/fsl/Xilinx/14.7/ISE_DS/ISE/coregen/ip/xilinx/dsp/com/xilinx/ip/convolution_v7_0/doc/convolution_ds248.pdf><convolution_ds248.pdf>
+ADD_CORE_DOCUMENT </home/fsl/Xilinx/14.7/ISE_DS/ISE/coregen/ip/xilinx/dsp/com/xilinx/ip/convolution_v7_0/doc/convolution_v7_0_vinfo.html><convolution_v7_0_vinfo.html>

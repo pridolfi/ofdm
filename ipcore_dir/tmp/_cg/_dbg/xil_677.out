@@ -1,0 +1,25 @@
+SET_PARAMETER ce true
+SET_PARAMETER rffd false
+SET_PARAMETER constraint_length 7
+SET_PARAMETER nd true
+SET_PARAMETER punctured false
+SET_PARAMETER puncture_code0 0
+SET_PARAMETER puncture_code1 0
+SET_PARAMETER component_name conv_encoder
+SET_PARAMETER output_rate 2
+SET_PARAMETER fd_in false
+SET_PARAMETER dual_output false
+SET_PARAMETER input_rate 1
+SET_PARAMETER synchronous_clear true
+SET_PARAMETER convolution_code0 1111001
+SET_PARAMETER rfd false
+SET_PARAMETER convolution_code1 1011011
+SET_PARAMETER convolution_code2 0000011
+SET_PARAMETER convolution_code3 0000011
+SET_PARAMETER convolution_code4 0000011
+SET_PARAMETER convolution_code5 0000011
+SET_PARAMETER convolution_code6 0000011
+SET_PARAMETER rdy true
+SET_ERROR_CODE 2
+SET_ERROR_MSG  CANCEL: Customization cancelled.
+SET_ERROR_TEXT Finished initializing IP model.	

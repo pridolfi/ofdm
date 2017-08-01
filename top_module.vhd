@@ -31,7 +31,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity top_module is
 	port(
-		fx2_clk, fx2_rst, clk_system : in  std_logic;
+		fx2_clk, fx2_rst, clk_system,clk2x_system : in  std_logic;
 		-- Host >> FPGA pipe:
 		h2fData_out                  : in  std_logic_vector(7 downto 0); -- data lines used when the host writes to a channel
 		h2fValid_out                 : in  std_logic; -- '1' means "on the next clock rising edge, please accept the data on h2fData_out"
@@ -107,29 +107,79 @@ architecture top_module_arch of top_module is
 			sclr     : in  std_logic;
 			clk      : in  std_logic);
 	end component;
-
+	
+	--COMPONENTE 4: MAPPER
+	component mapper
+	port(
+		clk,rst: in std_logic;
+		data_in: in std_logic_vector (1 downto 0);
+		valid_in: in std_logic;
+		valid_out: out std_logic;
+		i_channel,q_channel: out std_logic_vector(7 downto 0)
+	);
+	end component;
+	
+	--COMPONENTE 5: CORDIC
+	
+	component cordic
+	port (clk : in std_logic;
+		rst,valid_in : in std_logic;
+		valid_out : out std_logic;
+		x0  : in std_logic_vector (7 downto 0);
+		y0  : in std_logic_vector (7 downto 0);
+		zn  : out std_logic_vector (3 downto 0));
+	end component;
+	
+	--COMPONENTE 6: SERIALIZER
+	component serializer
+	port(
+		clk,rst: in std_logic;
+		valid_in: in std_logic;
+		valid_out: out std_logic;
+		data_in: in std_logic_vector (3 downto 0);
+		data_out: out std_logic_vector (1 downto 0)
+	);
+	end component;
 	--DECLARACION DE SEÑALES
 
 	--GENERALES
-	signal clk_s, rst_s : std_logic;
+	signal clk_s,clk2x_s, rst_s : std_logic;
 
 	--FIFO ENTRADA -> CONVOLUCIONADOR
 	signal fifo_in_rd_en_s,fifo_in_empty_s, conv_ce_s : std_logic;
 	signal conv_in_s: std_logic_vector(0 downto 0);
 
 	--CONVOLUCIONADOR -> VITERBI
-	signal rdy_conv_s      : std_logic;
-	signal conv_data_out_s : std_logic_vector(1 downto 0);
+--	signal conv_data_out_s : std_logic_vector(1 downto 0);
+--	signal viterbi_data_in0: std_logic_vector(0 downto 0);
+--	signal viterbi_data_in1: std_logic_vector(0 downto 0);
+	
+	--CONVOLUCIONADOR -> MAPPER
+	signal rdy_conv_s: std_logic;
+	signal data_out_conv_s: std_logic_vector (1 downto 0);
+	
+	--MAPPER->CORDIC
+	signal i_channel_s,q_channel_s: std_logic_vector (7 downto 0);
+	signal valid_out_mapper_s: std_logic;
+	
+	--CORDIC->SERIALIZER
+	signal data_out_cordic_s: std_logic_vector (3 downto 0);
+	signal valid_out_cordic_s: std_logic;
+	
+	--SERIALIZER-> VITERBI
+	signal data_out_serial_s: std_logic_vector (1 downto 0);
+	signal valid_out_serial_s: std_logic;
 	signal viterbi_data_in0: std_logic_vector(0 downto 0);
-	signal viterbi_data_in1: std_logic_vector(0 downto 0);
-
-	--VITERBI -> FIFO SALIDA
+   signal viterbi_data_in1: std_logic_vector(0 downto 0);
+ 
+ --VITERBI -> FIFO SALIDA
 	signal decoder_out_s: std_logic_vector(0 downto 0);
 	signal decoder_ready_s, fifo_out_empty_s, fifo_out_rd_en_s : std_logic;
 
 begin
 
 	clk_s<=clk_system;
+	clk2x_s<=clk2x_system;
 	rst_s<=fx2_rst;
 	-- INSTANCIACION DE COMPONENTES
 
@@ -173,13 +223,49 @@ begin
 	encoder0 : conv_encoder
 		port map(
 			data_in    => conv_in_s(0),
-			data_out_v => conv_data_out_s,
+			data_out_v => data_out_conv_s,
 			rdy        => rdy_conv_s,
 			nd => conv_ce_s,
 			ce         => '1',
 			sclr       => rst_s,
 			clk        => clk_s
 		);
+
+		--MAPPER
+			
+			mapper0 : mapper
+			
+			port map (
+				clk=>clk_s,
+				rst=>fx2_rst,
+				data_in=>data_out_conv_s,
+				valid_in=>rdy_conv_s,
+				valid_out=>valid_out_mapper_s,
+				i_channel=>i_channel_s,
+				q_channel=>q_channel_s
+			);
+			
+			cordic0: cordic
+			port map(
+				clk=>clk_s,
+				rst=>fx2_rst,
+				valid_in=>valid_out_mapper_s,
+				valid_out =>valid_out_cordic_s,
+				x0=>i_channel_s,
+				y0=>q_channel_s,
+				zn=> data_out_cordic_s
+			);
+			
+			serializer0: serializer
+			port map(
+				clk=>clk2x_s,
+				rst=>fx2_rst,
+				valid_in=>valid_out_cordic_s,
+				valid_out=>valid_out_serial_s,
+				data_in=> data_out_cordic_s,
+				data_out=> data_out_serial_s
+			);
+
 
 		--DECODIFICADOR VITERBI
 	viterbi0 : viterbi_decoder
@@ -188,15 +274,17 @@ begin
 			data_in1 => viterbi_data_in1,
 			data_out => decoder_out_s(0),
 			rdy      => decoder_ready_s,
-			ce       => rdy_conv_s,
+			ce       => valid_out_serial_s,
 			sclr     => rst_s,
 			clk      => clk_s
 		);
 
-	viterbi_data_in0(0)<=conv_data_out_s(0);
-	viterbi_data_in1(0)<=conv_data_out_s(1);
+	viterbi_data_in0(0)<=data_out_serial_s(0);
+	viterbi_data_in1(0)<=data_out_serial_s(1);
 	
 	h2fReady_in<='1';
+	
+	
 
 end top_module_arch;
 
