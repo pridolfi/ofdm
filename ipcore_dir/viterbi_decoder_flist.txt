@@ -11,3 +11,6 @@ viterbi_decoder.xise
 viterbi_decoder_flist.txt
 viterbi_decoder_readme.txt
 viterbi_decoder_xmdf.tcl
+viterbi_decoderrombram.mif
+viterbi_decoderromlifo.mif
+viterbi_decoderromwe.mif

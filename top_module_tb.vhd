@@ -132,33 +132,33 @@ BEGIN
 		h2fValid_out<='1';
 		wait for fx2_clk_period;
 		
---		h2fData_out<="10101010";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="01010101";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="01101001";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="11111111";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="10101010";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="01010101";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="01101001";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
+		h2fData_out<="01010101";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="10101010";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01010101";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="11111111";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="10101010";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01010101";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
+		
+		h2fData_out<="01101001";
+		h2fValid_out<='1';
+		wait for fx2_clk_period;
 --	
 --		h2fData_out<="11111111";
 --		h2fValid_out<='1';

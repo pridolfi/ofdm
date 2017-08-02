@@ -55,61 +55,74 @@ begin
 
 --Definicion del MUX
 
-data_out <= data_in(1 downto 0) when sel='0' else
-				data_in(3 downto 2) when sel='1';
+	data_out <= data_in(1 downto 0) when sel='0' else
+					data_in(3 downto 2) when sel='1';
+	
+	valid_out <= valid_in;
+
+	process (clk, rst, valid_in)
+	begin
+		if (rst ='1' or valid_in='0') then
+			sel <= '0';
+		elsif (clk'event and clk='0' and valid_in='1') then
+			sel <= not sel;
+		end if;
+	end process;
+
 
 --Descripciòn de la actualizacion de la maquina
-process(clk,rst)
-	begin
-
-		if (rst='1') then
-			fsmState<=IDLE_S;
-				
-		elsif (clk'event and clk='1') then
-			fsmState<=fsmState_next;
-		end if;
-end process;				
-		
-process(fsmState,valid_in)
-begin
-fsmState_next<=fsmState;
-
-case fsmState is
-
-	when IDLE_S=>
-	
-	valid_out<='0';
-	sel<='0';
-				
-	if (valid_in='1') then
-		fsmState_next<=DATA_L_S;
-	end if;
-	
-  when DATA_L_S=>
-	
-	valid_out<='1';
-	sel<='0';
-				
-	if (valid_in='1') then
-		fsmState_next<=DATA_H_S;
-	else
-		fsmState_next<=IDLE_S;
-	end if;
-
-	when DATA_H_S=>
-	
-	valid_out<='1';
-	sel<='1';
-				
-	if (valid_in='1') then
-		fsmState_next<=DATA_L_S;
-	else
-		fsmState_next<=IDLE_S;
-	end if;
-	
-end case;
-	
-end process;		
+--process(clk,rst)
+--	begin
+--
+--		if (rst='1') then
+--			fsmState<=IDLE_S;
+--				
+--		elsif (clk'event and clk='1') then
+--			fsmState<=fsmState_next;
+--		end if;
+--end process;				
+--		
+--process(fsmState,valid_in)
+--begin
+--fsmState_next<=fsmState;
+--
+--case fsmState is
+--
+--	when IDLE_S=>
+--	
+--	valid_out<='0';
+--	sel<='0';
+--				
+--	if (valid_in='1') then
+--		valid_out<='1';
+--		fsmState_next<=DATA_L_S;
+--	end if;
+--	
+--  when DATA_L_S=>
+--		
+--	sel<='0';
+--				
+--	if (valid_in='1') then
+--		fsmState_next<=DATA_H_S;
+--	else
+--		fsmState_next<=IDLE_S;
+--	end if;
+--
+--	when DATA_H_S=>
+--	
+----	valid_out<='1';
+--	sel<='1';
+--				
+--	if (valid_in='1') then
+--		fsmState_next<=DATA_L_S;
+--	else
+--		valid_out<='0';
+--		fsmState_next<=IDLE_S;
+--	end if;
+--	
+--end case;
+--	
+--end process;		
 
 end serializer_arch;
 

@@ -1,5 +1,5 @@
 The following files were generated for 'viterbi_decoder' in directory
-/home/fsl/MSE/PdS3/ofdm/ipcore_dir/
+/home/pablo/work/sdc/tp_final/ofdm/ipcore_dir/
 
 XCO file generator:
    Generate an XCO file for compatibility with legacy flows.
@@ -12,6 +12,9 @@ Creates an implementation netlist:
    * viterbi_decoder.ngc
    * viterbi_decoder.vhd
    * viterbi_decoder.vho
+   * viterbi_decoderrombram.mif
+   * viterbi_decoderromlifo.mif
+   * viterbi_decoderromwe.mif
 
 Creates an HDL instantiation template:
    Creates an HDL instantiation template for the IP.

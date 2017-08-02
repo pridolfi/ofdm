@@ -63,6 +63,18 @@ utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path viterbi_deco
 utilities_xmdf::xmdfSetData $instance FileSet $fcount type AnyView
 incr fcount
 
+utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path viterbi_decoderrombram.mif
+utilities_xmdf::xmdfSetData $instance FileSet $fcount type AnyView
+incr fcount
+
+utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path viterbi_decoderromlifo.mif
+utilities_xmdf::xmdfSetData $instance FileSet $fcount type AnyView
+incr fcount
+
+utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path viterbi_decoderromwe.mif
+utilities_xmdf::xmdfSetData $instance FileSet $fcount type AnyView
+incr fcount
+
 utilities_xmdf::xmdfSetData $instance FileSet $fcount associated_module viterbi_decoder
 incr fcount
 

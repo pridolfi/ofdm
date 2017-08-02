@@ -175,7 +175,8 @@ architecture top_module_arch of top_module is
  --VITERBI -> FIFO SALIDA
 	signal decoder_out_s: std_logic_vector(0 downto 0);
 	signal decoder_ready_s, fifo_out_empty_s, fifo_out_rd_en_s : std_logic;
-
+	signal out_s : std_logic;
+	
 begin
 
 	clk_s<=clk_system;
@@ -276,7 +277,7 @@ begin
 			rdy      => decoder_ready_s,
 			ce       => valid_out_serial_s,
 			sclr     => rst_s,
-			clk      => clk_s
+			clk      => clk2x_s
 		);
 
 	viterbi_data_in0(0)<=data_out_serial_s(0);
@@ -284,7 +285,7 @@ begin
 	
 	h2fReady_in<='1';
 	
-	
+	out_s <= valid_out_serial_s and decoder_ready_s and decoder_out_s(0);
 
 end top_module_arch;
 

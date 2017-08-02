@@ -1,5 +1,9 @@
 INFO:sim:172 - Generating IP...
 Applying current project options...
 Finished applying current project options.
-Cancelled executing Tcl generator.
-Wrote CGP file for project 'conv_encoder'.
+Customizing IP...
+Release 14.7 - Xilinx CORE Generator IP GUI Launcher P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Full license for component <viterbi> allows you to use this component. This
+license does not give you access to source code implementing this component.  Cancelled Customization.
+Wrote CGP file for project 'viterbi_decoder'.
