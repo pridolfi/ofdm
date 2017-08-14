@@ -133,7 +133,7 @@ architecture top_module_arch of top_module is
 	--COMPONENTE 6: SERIALIZER
 	component serializer
 	port(
-		clk,rst: in std_logic;
+		rd_clk,wr_clk,rst: in std_logic;
 		valid_in: in std_logic;
 		valid_out: out std_logic;
 		data_in: in std_logic_vector (3 downto 0);
@@ -259,7 +259,8 @@ begin
 			
 			serializer0: serializer
 			port map(
-				clk=>clk2x_s,
+				wr_clk=>clk_s,
+				rd_clk=>clk2x_s,
 				rst=>fx2_rst,
 				valid_in=>valid_out_cordic_s,
 				valid_out=>valid_out_serial_s,

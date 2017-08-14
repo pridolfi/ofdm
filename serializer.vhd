@@ -31,7 +31,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity serializer is
 port(
-	clk,rst: in std_logic;
+	wr_clk, rd_clk,rst: in std_logic;
 	valid_in: in std_logic;
 	valid_out: out std_logic;
 	data_in: in std_logic_vector (3 downto 0);
@@ -42,87 +42,38 @@ end serializer;
 
 architecture serializer_arch of serializer is
 
---Señales de control
-signal sel: std_logic;
-
---Señales de datos
-
---Definición de estados y señales fsmSearch
-type fsmState_t IS (IDLE_S,DATA_L_S,DATA_H_S);
-signal fsmState,fsmState_next : fsmState_t :=IDLE_S;
+-- FIFO interna del serializer
+COMPONENT fifo4_to_2
+  PORT (
+    rst : IN STD_LOGIC;
+    wr_clk : IN STD_LOGIC;
+    rd_clk : IN STD_LOGIC;
+    din : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    wr_en : IN STD_LOGIC;
+    rd_en : IN STD_LOGIC;
+    dout : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    full : OUT STD_LOGIC;
+    empty : OUT STD_LOGIC;
+    valid : OUT STD_LOGIC
+  );
+END COMPONENT;
 
 begin
 
---Definicion del MUX
-
-	data_out <= data_in(1 downto 0) when sel='0' else
-					data_in(3 downto 2) when sel='1';
-	
-	valid_out <= valid_in;
-
-	process (clk, rst, valid_in)
-	begin
-		if (rst ='1' or valid_in='0') then
-			sel <= '0';
-		elsif (clk'event and clk='0' and valid_in='1') then
-			sel <= not sel;
-		end if;
-	end process;
-
-
---Descripciòn de la actualizacion de la maquina
---process(clk,rst)
---	begin
---
---		if (rst='1') then
---			fsmState<=IDLE_S;
---				
---		elsif (clk'event and clk='1') then
---			fsmState<=fsmState_next;
---		end if;
---end process;				
---		
---process(fsmState,valid_in)
---begin
---fsmState_next<=fsmState;
---
---case fsmState is
---
---	when IDLE_S=>
---	
---	valid_out<='0';
---	sel<='0';
---				
---	if (valid_in='1') then
---		valid_out<='1';
---		fsmState_next<=DATA_L_S;
---	end if;
---	
---  when DATA_L_S=>
---		
---	sel<='0';
---				
---	if (valid_in='1') then
---		fsmState_next<=DATA_H_S;
---	else
---		fsmState_next<=IDLE_S;
---	end if;
---
---	when DATA_H_S=>
---	
-----	valid_out<='1';
---	sel<='1';
---				
---	if (valid_in='1') then
---		fsmState_next<=DATA_L_S;
---	else
---		valid_out<='0';
---		fsmState_next<=IDLE_S;
---	end if;
---	
---end case;
---	
---end process;		
+serializer_fifo : fifo4_to_2
+  PORT MAP (
+    rst => rst,
+    wr_clk => wr_clk,
+    rd_clk => rd_clk,
+    din(3 downto 2) => data_in(1 downto 0),
+	 din(1 downto 0) => data_in(3 downto 2),
+    wr_en => valid_in,
+    rd_en => '1',
+    dout => data_out,
+    full => open,
+    empty => open,
+    valid => valid_out
+  );
 
 end serializer_arch;
 
