@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/fsl/MSE/PdS3/ofdm/IFFT_FFT_wrapper_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="ifft_fft_wrapper_tb" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="textio" />
+            <top_module name="vcomponents" />
+            <top_module name="vital_primitives" />
+            <top_module name="vital_timing" />
+            <top_module name="vpkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="divider22" type="divider">
+      <obj_property name="label">Entradas</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/i_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/q_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">q_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">q_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider22" type="divider">
+      <obj_property name="label">Conexion IFFT-FFT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/uut/ifft0/xn_index" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xn_index[5:0]</obj_property>
+      <obj_property name="ObjectShortName">xn_index[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/uut/dv_s_ifft" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dv_s_ifft</obj_property>
+      <obj_property name="ObjectShortName">dv_s_ifft</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/uut/start_o" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start_o</obj_property>
+      <obj_property name="ObjectShortName">start_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/uut/ifft0/xk_index" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xk_index[5:0]</obj_property>
+      <obj_property name="ObjectShortName">xk_index[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/uut/fft0/xn_index" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xn_index[5:0]</obj_property>
+      <obj_property name="ObjectShortName">xn_index[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/uut/xk_re_ifft" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xk_re_ifft[14:0]</obj_property>
+      <obj_property name="ObjectShortName">xk_re_ifft[14:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/uut/xk_re_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xk_re_o[14:0]</obj_property>
+      <obj_property name="ObjectShortName">xk_re_o[14:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/uut/xk_im_ifft" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xk_im_ifft[14:0]</obj_property>
+      <obj_property name="ObjectShortName">xk_im_ifft[14:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/uut/xk_im_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xk_im_o[14:0]</obj_property>
+      <obj_property name="ObjectShortName">xk_im_o[14:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/uut/fft0/xn_re" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xn_re[7:0]</obj_property>
+      <obj_property name="ObjectShortName">xn_re[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/uut/fft0/xn_im" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xn_im[7:0]</obj_property>
+      <obj_property name="ObjectShortName">xn_im[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider24" type="divider">
+      <obj_property name="label">Salidas</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/i_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_o[14:0]</obj_property>
+      <obj_property name="ObjectShortName">i_o[14:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/q_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">q_o[14:0]</obj_property>
+      <obj_property name="ObjectShortName">q_o[14:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/xo_index" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xo_index[5:0]</obj_property>
+      <obj_property name="ObjectShortName">xo_index[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/dv_o" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dv_o</obj_property>
+      <obj_property name="ObjectShortName">dv_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ifft_fft_wrapper_tb/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+</wave_config>

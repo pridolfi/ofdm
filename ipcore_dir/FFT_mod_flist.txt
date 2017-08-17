@@ -1,0 +1,15 @@
+# Output products list for <FFT_mod>
+FFT_mod/doc/xfft_ds260.pdf
+FFT_mod/doc/xfft_v7_1_readme.txt
+FFT_mod/doc/xfft_v7_1_vinfo.html
+FFT_mod.asy
+FFT_mod.gise
+FFT_mod.ngc
+FFT_mod.sym
+FFT_mod.vhd
+FFT_mod.vho
+FFT_mod.xco
+FFT_mod.xise
+FFT_mod_flist.txt
+FFT_mod_xmdf.tcl
+_xmsgs/pn_parser.xmsgs
