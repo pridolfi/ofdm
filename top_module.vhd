@@ -168,10 +168,10 @@ architecture top_module_arch of top_module is
 	
 	--SERIALIZER-> VITERBI
 	signal data_out_serial_s: std_logic_vector (1 downto 0);
-	signal valid_out_serial_s: std_logic;
+	signal viterbi_ce,valid_out_serial_s: std_logic;
 	signal viterbi_data_in0: std_logic_vector(0 downto 0);
    signal viterbi_data_in1: std_logic_vector(0 downto 0);
- 
+	
  --VITERBI -> FIFO SALIDA
 	signal decoder_out_s: std_logic_vector(0 downto 0);
 	signal decoder_ready_s, fifo_out_empty_s, fifo_out_rd_en_s : std_logic;
@@ -201,23 +201,6 @@ begin
 		);
 		
 		fifo_in_rd_en_s<=not fifo_in_empty_s;
-
-		--FIFO DE SALIDA
-	fifo_out0 : fifo_16_2clk_1a8
-		PORT MAP(
-			rst    => rst_s,
-			wr_clk => clk_s,
-			rd_clk => fx2_clk,
-			din    => decoder_out_s,
-			wr_en  => decoder_ready_s,
-			rd_en  => fifo_out_rd_en_s,
-			dout   => f2hData_in,
-			full   => open,
-			empty  => fifo_out_empty_s,
-			valid  => f2hValid_in
-		);
-
-		fifo_out_rd_en_s<=(not fifo_out_empty_s) and f2hReady_out;
 
 		--CODIFICADOR CONVOLUCIONAL
 
@@ -276,17 +259,39 @@ begin
 			data_in1 => viterbi_data_in1,
 			data_out => decoder_out_s(0),
 			rdy      => decoder_ready_s,
-			ce       => valid_out_serial_s,
+			ce       => viterbi_ce,
 			sclr     => rst_s,
 			clk      => clk2x_s
 		);
 
-	viterbi_data_in0(0)<=data_out_serial_s(0);
-	viterbi_data_in1(0)<=data_out_serial_s(1);
+	viterbi_ce <= '1' when valid_out_serial_s = '1' or decoder_ready_s = '1' else
+					  '0';
+	
+	viterbi_data_in0(0) <= data_out_serial_s(0) when valid_out_serial_s = '1' else
+								 '0'; -- padding
+	viterbi_data_in1(0) <= data_out_serial_s(1) when valid_out_serial_s = '1' else
+								 '0'; -- padding
 	
 	h2fReady_in<='1';
 	
 	out_s <= valid_out_serial_s and decoder_ready_s and decoder_out_s(0);
+
+		--FIFO DE SALIDA
+	fifo_out0 : fifo_16_2clk_1a8
+		PORT MAP(
+			rst    => rst_s,
+			wr_clk => clk_s,
+			rd_clk => fx2_clk,
+			din    => decoder_out_s,
+			wr_en  => decoder_ready_s,
+			rd_en  => fifo_out_rd_en_s,
+			dout   => f2hData_in,
+			full   => open,
+			empty  => fifo_out_empty_s,
+			valid  => f2hValid_in
+		);
+
+		fifo_out_rd_en_s<=(not fifo_out_empty_s) and f2hReady_out;
 
 end top_module_arch;
 

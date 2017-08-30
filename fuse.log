@@ -1,52 +1,31 @@
-Running: /home/fsl/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/fsl/MSE/PdS3/ofdm/IFFT_FFT_wrapper_tb_isim_beh.exe" -prj "/home/fsl/MSE/PdS3/ofdm/IFFT_FFT_wrapper_tb_beh.prj" "work.IFFT_FFT_wrapper_tb" 
+Running: /home/pablo/programas/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/pablo/work/sdc/tp_final/ofdm/fifo_iface_tb_isim_beh.exe" -prj "/home/pablo/work/sdc/tp_final/ofdm/fifo_iface_tb_beh.prj" "work.fifo_iface_tb" 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "/home/fsl/MSE/PdS3/ofdm/ipcore_dir/FFT_mod.vhd" into library work
-Parsing VHDL file "/home/fsl/MSE/PdS3/ofdm/IFFT_FFT_wrapper.vhd" into library work
-Parsing VHDL file "/home/fsl/MSE/PdS3/ofdm/IFFT_FFT_wrapper_tb.vhd" into library work
+Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/ipcore_dir/fifo8x64.vhd" into library work
+Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/fifo_iface.vhd" into library work
+Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/fifo_iface_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 186140 KB
-Fuse CPU Usage: 2630 ms
+Fuse Memory Usage: 102492 KB
+Fuse CPU Usage: 1320 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
-Compiling package vcomponents
-Compiling package textio
-Compiling package vital_timing
-Compiling package vital_primitives
-Compiling package vpkg
 Compiling package std_logic_arith
-Compiling package std_logic_signed
-Compiling architecture vcc_v of entity VCC [vcc_default]
-Compiling architecture gnd_v of entity GND [gnd_default]
-Compiling architecture fde_v of entity FDE [\FDE('0')\]
-Compiling architecture fdse_v of entity FDSE [\FDSE('1')\]
-Compiling architecture xorcy_v of entity XORCY [xorcy_default]
-Compiling architecture lut2_v of entity LUT2 [\LUT2("1001")(0,3)\]
-Compiling architecture muxcy_v of entity MUXCY [muxcy_default]
-Compiling architecture mult18x18sio_v of entity MULT18X18SIO [\MULT18X18SIO(1,1,"DIRECT",1)(1,...]
-Compiling architecture lut4_v of entity LUT4 [\LUT4("0000000000000001")(0,15)\]
-Compiling architecture fdre_v of entity FDRE [\FDRE('0')\]
-Compiling architecture muxf5_v of entity MUXF5 [muxf5_default]
-Compiling architecture muxf6_v of entity MUXF6 [muxf6_default]
-Compiling architecture lut3_v of entity LUT3 [\LUT3("11001010")(0,7)\]
-Compiling architecture fdrs_v of entity FDRS [\FDRS('0')\]
-Compiling architecture lut1_v of entity LUT1 [\LUT1("0010")(0,3)\]
-Compiling architecture inv_v of entity INV [inv_default]
-Compiling architecture ramb16_s18_s18_v of entity RAMB16_S18_S18 [\RAMB16_S18_S18:ifft_fft_wrapper...]
-Compiling architecture lut3_l_v of entity LUT3_L [\LUT3_L("11100100")(0,7)\]
-Compiling architecture srl16e_v of entity SRL16E [\SRL16E("0000000000000000")(0,15...]
-Compiling architecture ramb16_s36_s36_v of entity RAMB16_S36_S36 [\RAMB16_S36_S36:ifft_fft_wrapper...]
-Compiling architecture structure of entity FFT_mod [\FFT_mod:ifft_fft_wrapper_tb:uut...]
-Compiling architecture ifft_fft_wrapper_arch of entity IFFT_FFT_wrapper [\IFFT_FFT_wrapper:ifft_fft_wrapp...]
-Compiling architecture behavior of entity ifft_fft_wrapper_tb
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_ss [\fifo_generator_v9_3_bhv_ss(7,8,...]
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_preload0 [\fifo_generator_v9_3_bhv_preload...]
+Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(1,0,7,...]
+Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(1,0,7,"Blan...]
+Compiling architecture fifo8x64_a of entity fifo8x64 [fifo8x64_default]
+Compiling architecture fifo_iface_arch of entity fifo_iface [fifo_iface_default]
+Compiling architecture behavior of entity fifo_iface_tb
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 135 VHDL Units
-Built simulation executable /home/fsl/MSE/PdS3/ofdm/IFFT_FFT_wrapper_tb_isim_beh.exe
-Fuse Memory Usage: 778364 KB
-Fuse CPU Usage: 3480 ms
-GCC CPU Usage: 110 ms
+Compiled 18 VHDL Units
+Built simulation executable /home/pablo/work/sdc/tp_final/ofdm/fifo_iface_tb_isim_beh.exe
+Fuse Memory Usage: 677904 KB
+Fuse CPU Usage: 1500 ms
+GCC CPU Usage: 160 ms

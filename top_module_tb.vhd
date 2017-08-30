@@ -30,7 +30,7 @@ USE ieee.std_logic_1164.ALL;
  
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
+USE ieee.numeric_std.ALL;
  
 ENTITY top_module_tb IS
 END top_module_tb;
@@ -128,136 +128,15 @@ BEGIN
 		
 		wait for 100 ns;	
 		
-		h2fData_out<="10101010";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
+		for i_loop in 0 to 15 loop
+			h2fData_out <= std_logic_vector(to_unsigned(i_loop, h2fData_out'length));
+			h2fValid_out<='1';
+			wait for fx2_clk_period;
+		end loop;
 		
-		h2fData_out<="01010101";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="10101010";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01010101";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="11111111";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="10101010";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01010101";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
-		
-		h2fData_out<="01101001";
-		h2fValid_out<='1';
-		wait for fx2_clk_period;
---	
---		h2fData_out<="11111111";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="10101010";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="01010101";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="01101001";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="11111111";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="10101010";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="01010101";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="01101001";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="11111111";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="10101010";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="01010101";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="01101001";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="11111111";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="10101010";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="01010101";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="01101001";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---	
---		h2fData_out<="11111111";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="10101010";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="01010101";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="01101001";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="11111111";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="10101010";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="01010101";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
---		
---		h2fData_out<="01101001";
---		h2fValid_out<='1';
---		wait for fx2_clk_period;
-	
 		h2fValid_out<='0';
- 
+		f2hReady_out<='1';
+		
       wait;
    end process;
 

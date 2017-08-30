@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/fsl/MSE/PdS3/ofdm/IFFT_FFT_wrapper_tb_isim_beh.exe" -prj "/home/fsl/MSE/PdS3/ofdm/IFFT_FFT_wrapper_tb_beh.prj" "work.IFFT_FFT_wrapper_tb" 
+-intstyle "ise" -incremental -o "/home/pablo/work/sdc/tp_final/ofdm/fifo_iface_tb_isim_beh.exe" -prj "/home/pablo/work/sdc/tp_final/ofdm/fifo_iface_tb_beh.prj" "work.fifo_iface_tb" 

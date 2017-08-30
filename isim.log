@@ -1,76 +1,83 @@
 ISim log file
-Running: /home/fsl/MSE/PdS3/ofdm/IFFT_FFT_wrapper_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/fsl/MSE/PdS3/ofdm/IFFT_FFT_wrapper_tb_isim_beh.wdb 
+Running: /home/pablo/work/sdc/tp_final/ofdm/fifo_iface_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/pablo/work/sdc/tp_final/ofdm/fifo_iface_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 This is a Full version of ISim.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
-# run 1000 ns
+# run 5000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run 1.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run 1.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 5.00us
+# restart
+# run 5.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run 5.00us
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 ISim P.20131013 (signature 0xfbc00daa)
 This is a Full version of ISim.
-# run 1000 ns
+# run 5000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # restart
-# run 50.00us
+# run 5.00us
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # restart
-# run 50.00us
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# restart
-# run 50.00us
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# restart
-# run 50.00us
+# run 5.00us
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 ISim P.20131013 (signature 0xfbc00daa)
 This is a Full version of ISim.
-# run 1000 ns
+# run 5000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # restart
-# run 50.00us
+# run 5.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 10us
+# restart
+# run 10us
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # restart
-# run 50.00us
+# run 10us
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 ISim P.20131013 (signature 0xfbc00daa)
 This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# restart
-# run 50.00us
+# run 5000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 ISim P.20131013 (signature 0xfbc00daa)
 This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# restart
-# run 50.00us
+# run 5000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 ISim P.20131013 (signature 0xfbc00daa)
 This is a Full version of ISim.
-# run 1000 ns
+# run 5000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# restart
-# run 50.00us
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 5000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# restart
-# run 50.00us
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 5000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# exit 0

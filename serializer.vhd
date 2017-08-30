@@ -58,6 +58,8 @@ COMPONENT fifo4_to_2
   );
 END COMPONENT;
 
+signal s_full,s_empty, s_valid, fifo_valid: std_logic;
+
 begin
 
 serializer_fifo : fifo4_to_2
@@ -68,12 +70,16 @@ serializer_fifo : fifo4_to_2
     din(3 downto 2) => data_in(1 downto 0),
 	 din(1 downto 0) => data_in(3 downto 2),
     wr_en => valid_in,
-    rd_en => '1',
+    rd_en => s_valid,
     dout => data_out,
-    full => open,
-    empty => open,
-    valid => valid_out
+    full => s_full,
+    empty => s_empty,
+    valid => fifo_valid
   );
+
+	valid_out <= s_valid and fifo_valid;
+	s_valid <= '1' when s_full = '1' else
+	           '0' when s_empty = '1' or rst = '1';
 
 end serializer_arch;
 
