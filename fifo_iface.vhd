@@ -103,7 +103,7 @@ fifo : fifo8x64
 			start_out <= '0';
 			rd_en_s <= '0';
 			
-			if (full_s='1') then
+			if (full_s='1' and empty_s='0') then
 				start_out <= '1';
 				fsmState_next<=SENDING;
 	    	end if;

@@ -121,12 +121,12 @@ BEGIN
       -- hold reset state for 100 ns.
 		fx2_rst<='1';
 		f2hValid_in<='0';
-		
-      wait for 100 ns;	
-		
+		wait for 100 ns;		
 		fx2_rst<='0';
 		
-		wait for 100 ns;	
+		wait for fx2_clk_period*100;	
+
+		wait until fx2_clk = '1';
 		
 		for i_loop in 0 to 15 loop
 			h2fData_out <= std_logic_vector(to_unsigned(i_loop, h2fData_out'length));

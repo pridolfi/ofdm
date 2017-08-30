@@ -140,6 +140,32 @@ architecture top_module_arch of top_module is
 		data_out: out std_logic_vector (1 downto 0)
 	);
 	end component;
+	
+	--COMPONENTE 7: FIFO_IFACE I PARA MAPPER>IFFT
+	component  fifo_iface
+	port (
+	data_in  : in std_logic_vector(7 downto 0);
+	valid_in : in std_logic;
+	clk,rst  : in std_logic;
+	data_out : out std_logic_vector(7 downto 0);
+	start_out: out std_logic );
+	end component;
+	
+	--COMPONENTE 8: IFFT-FFT
+	COMPONENT IFFT_FFT_wrapper
+    PORT(
+         clk : IN  std_logic;
+         start : IN  std_logic;
+         rst : IN  std_logic;
+         i_i : IN  std_logic_vector(7 downto 0);
+         q_i : IN  std_logic_vector(7 downto 0);
+         i_o : OUT  std_logic_vector(14 downto 0);
+         q_o : OUT  std_logic_vector(14 downto 0);
+         xo_index : OUT  std_logic_vector(5 downto 0);
+         dv_o : OUT  std_logic
+        );
+    END COMPONENT;
+		
 	--DECLARACION DE SEÑALES
 
 	--GENERALES
@@ -158,9 +184,15 @@ architecture top_module_arch of top_module is
 	signal rdy_conv_s: std_logic;
 	signal data_out_conv_s: std_logic_vector (1 downto 0);
 	
-	--MAPPER->CORDIC
+	--MAPPER->FIFO_IFACE->IFFT->FFT
+	signal mapper_i_s, mapper_q_s : std_logic_vector(7 downto 0);
+	signal start_ifft_s : std_logic;
+	
+	--FFT -> CORDIC
 	signal i_channel_s,q_channel_s: std_logic_vector (7 downto 0);
 	signal valid_out_mapper_s: std_logic;
+	signal fft_i_s, fft_q_s : std_logic_vector(14 downto 0);
+	signal fft_valid_out_s : std_logic;	
 	
 	--CORDIC->SERIALIZER
 	signal data_out_cordic_s: std_logic_vector (3 downto 0);
@@ -218,7 +250,6 @@ begin
 		--MAPPER
 			
 			mapper0 : mapper
-			
 			port map (
 				clk=>clk_s,
 				rst=>fx2_rst,
@@ -229,14 +260,47 @@ begin
 				q_channel=>q_channel_s
 			);
 			
+			fifo_iface_ifft_i : fifo_iface
+			port map(
+				data_in  => i_channel_s,
+				valid_in => valid_out_mapper_s,
+				clk => clk_s,
+				rst => fx2_rst,  
+				data_out => mapper_i_s,
+				start_out => start_ifft_s
+			);
+			
+			fifo_iface_ifft_q : fifo_iface
+			port map(
+				data_in  => q_channel_s,
+				valid_in => valid_out_mapper_s,
+				clk => clk_s,
+				rst => fx2_rst,  
+				data_out => mapper_q_s,
+				start_out => start_ifft_s
+			);
+			
+			fft_ifft : IFFT_FFT_wrapper
+			PORT map (
+         clk => clk_s,
+         start => start_ifft_s,
+         rst => fx2_rst,
+         i_i => mapper_i_s,
+         q_i => mapper_q_s,
+         i_o => fft_i_s,
+         q_o => fft_q_s,
+         xo_index => open,
+         dv_o => fft_valid_out_s
+         );
+			
 			cordic0: cordic
 			port map(
 				clk=>clk_s,
 				rst=>fx2_rst,
-				valid_in=>valid_out_mapper_s,
+				valid_in=>fft_valid_out_s,
 				valid_out =>valid_out_cordic_s,
-				x0=>i_channel_s,
-				y0=>q_channel_s,
+				x0=>fft_i_s(7 downto 0),
+				y0=>fft_q_s(7 downto 0),
 				zn=> data_out_cordic_s
 			);
 			
