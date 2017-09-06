@@ -38,7 +38,7 @@ port(
 	i_i,q_i: in std_logic_vector (7 downto 0);
 	
 	--Data outputs
-	i_o,q_o: out std_logic_vector(14 downto 0);
+	i_o,q_o: out std_logic_vector(21 downto 0);
 	xo_index: out std_logic_vector(5 downto 0);
 	
 	--State outputs
@@ -68,6 +68,29 @@ COMPONENT FFT_mod
     xk_index : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
     xk_re : OUT STD_LOGIC_VECTOR(14 DOWNTO 0);
     xk_im : OUT STD_LOGIC_VECTOR(14 DOWNTO 0)
+  );
+END COMPONENT;
+
+COMPONENT fft_out
+  PORT (
+    clk : IN STD_LOGIC;
+	 ce : IN STD_LOGIC;
+    sclr : IN STD_LOGIC;
+    start : IN STD_LOGIC;
+	 unload : IN STD_LOGIC;
+    xn_re : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
+    xn_im : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
+    fwd_inv : IN STD_LOGIC;
+    fwd_inv_we : IN STD_LOGIC;
+    rfd : OUT STD_LOGIC;
+    xn_index : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+    busy : OUT STD_LOGIC;
+    edone : OUT STD_LOGIC;
+    done : OUT STD_LOGIC;
+    dv : OUT STD_LOGIC;
+    xk_index : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+    xk_re : OUT STD_LOGIC_VECTOR(21 DOWNTO 0);
+    xk_im : OUT STD_LOGIC_VECTOR(21 DOWNTO 0)
   );
 END COMPONENT;
 
@@ -104,15 +127,15 @@ ifft0 : FFT_mod
     xk_im => xk_im_ifft
   );
   
-  fft0 : FFT_mod
+  fft0 : fft_out
   PORT MAP (
     clk => clk,
     ce => '1',
     sclr => rst,
     start => start_o,
 	 unload => done_s_fft,
-    xn_re => xk_re_o(14 downto 7),
-    xn_im => xk_im_o(14 downto 7),
+    xn_re => xk_re_o,
+    xn_im => xk_im_o,
     fwd_inv => '1',
     fwd_inv_we => '1',
     rfd => open,

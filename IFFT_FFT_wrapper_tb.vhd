@@ -46,8 +46,8 @@ ARCHITECTURE behavior OF IFFT_FFT_wrapper_tb IS
          rst : IN  std_logic;
          i_i : IN  std_logic_vector(7 downto 0);
          q_i : IN  std_logic_vector(7 downto 0);
-         i_o : OUT  std_logic_vector(14 downto 0);
-         q_o : OUT  std_logic_vector(14 downto 0);
+         i_o : OUT  std_logic_vector(21 downto 0);
+         q_o : OUT  std_logic_vector(21 downto 0);
          xo_index : OUT  std_logic_vector(5 downto 0);
          dv_o : OUT  std_logic
         );
@@ -62,8 +62,8 @@ ARCHITECTURE behavior OF IFFT_FFT_wrapper_tb IS
    signal q_i : std_logic_vector(7 downto 0) := (others => '0');
 
  	--Outputs
-   signal i_o : std_logic_vector(14 downto 0);
-   signal q_o : std_logic_vector(14 downto 0);
+   signal i_o : std_logic_vector(21 downto 0);
+   signal q_o : std_logic_vector(21 downto 0);
    signal xo_index : std_logic_vector(5 downto 0);
    signal dv_o : std_logic;
 
@@ -123,8 +123,8 @@ BEGIN
 			for I in 0 to 3 loop
 				
 				i_i<=std_logic_vector(to_unsigned(I,i_i'length));
-				q_i<= (others=>'0');
-							
+				q_i<=std_logic_vector(to_unsigned(3-I,q_i'length));
+
 			wait for clk_period;
 			end loop;
 		end loop;

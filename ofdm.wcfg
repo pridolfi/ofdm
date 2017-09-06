@@ -21,7 +21,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="65" />
+   <WVObjectSize size="44" />
    <wvobject fp_name="/top_module_tb/fx2_clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">fx2_clk</obj_property>
       <obj_property name="ObjectShortName">fx2_clk</obj_property>
@@ -58,6 +58,10 @@
    <wvobject fp_name="group95" type="group">
       <obj_property name="label">FIFO</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_module_tb/uut/fifo_in0/full" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">full</obj_property>
+         <obj_property name="ObjectShortName">full</obj_property>
+      </wvobject>
       <wvobject fp_name="/top_module_tb/uut/fifo_in0/wr_clk" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">wr_clk</obj_property>
          <obj_property name="ObjectShortName">wr_clk</obj_property>
@@ -125,126 +129,140 @@
       <obj_property name="BkColor">128 128 255</obj_property>
       <obj_property name="TextColor">230 230 230</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/data_in" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">data_in[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/valid_in" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">valid_in</obj_property>
-      <obj_property name="ObjectShortName">valid_in</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/data_out" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">data_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/start_out" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">start_out</obj_property>
-      <obj_property name="ObjectShortName">start_out</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/fsmstate" type="other" db_ref_id="1">
-      <obj_property name="ElementShortName">fsmstate</obj_property>
-      <obj_property name="ObjectShortName">fsmstate</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/rd_en_s" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">rd_en_s</obj_property>
-      <obj_property name="ObjectShortName">rd_en_s</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/full_s" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">full_s</obj_property>
-      <obj_property name="ObjectShortName">full_s</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/empty_s" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">empty_s</obj_property>
-      <obj_property name="ObjectShortName">empty_s</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/clk" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="group94" type="group">
-      <wvobject fp_name="divider75" type="divider">
-         <obj_property name="label">IFFT_FFT</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="BkColor">128 128 255</obj_property>
-         <obj_property name="TextColor">230 230 230</obj_property>
+   <wvobject fp_name="group92" type="group">
+      <obj_property name="label">FFT Aux</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/data_in" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/valid_in" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">valid_in</obj_property>
+         <obj_property name="ObjectShortName">valid_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/data_out" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/start_out" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">start_out</obj_property>
+         <obj_property name="ObjectShortName">start_out</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/fsmstate" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">fsmstate</obj_property>
+         <obj_property name="ObjectShortName">fsmstate</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/rd_en_s" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">rd_en_s</obj_property>
+         <obj_property name="ObjectShortName">rd_en_s</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/full_s" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">full_s</obj_property>
+         <obj_property name="ObjectShortName">full_s</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/empty_s" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">empty_s</obj_property>
+         <obj_property name="ObjectShortName">empty_s</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fifo_iface_ifft_i/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fft_ifft/dv_s_ifft" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">dv_s_ifft</obj_property>
+         <obj_property name="ObjectShortName">dv_s_ifft</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fft_ifft/start_o" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">start_o</obj_property>
+         <obj_property name="ObjectShortName">start_o</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fft_ifft/xk_re_ifft" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">xk_re_ifft[14:0]</obj_property>
+         <obj_property name="ObjectShortName">xk_re_ifft[14:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fft_ifft/xk_im_ifft" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">xk_im_ifft[14:0]</obj_property>
+         <obj_property name="ObjectShortName">xk_im_ifft[14:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fft_ifft/ifft0/xk_index" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">xk_index[5:0]</obj_property>
+         <obj_property name="ObjectShortName">xk_index[5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fft_ifft/xk_re_o" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">xk_re_o[14:0]</obj_property>
+         <obj_property name="ObjectShortName">xk_re_o[14:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fft_ifft/xk_im_o" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">xk_im_o[14:0]</obj_property>
+         <obj_property name="ObjectShortName">xk_im_o[14:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fft_ifft/fft0/xn_index" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">xn_index[5:0]</obj_property>
+         <obj_property name="ObjectShortName">xn_index[5:0]</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fft_ifft/start" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">start</obj_property>
-      <obj_property name="ObjectShortName">start</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fft_ifft/i_i" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">i_i[7:0]</obj_property>
-      <obj_property name="ObjectShortName">i_i[7:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fft_ifft/q_i" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">q_i[7:0]</obj_property>
-      <obj_property name="ObjectShortName">q_i[7:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fft_ifft/ifft0/xn_index" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">xn_index[5:0]</obj_property>
-      <obj_property name="ObjectShortName">xn_index[5:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fft_ifft/dv_s_ifft" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">dv_s_ifft</obj_property>
-      <obj_property name="ObjectShortName">dv_s_ifft</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fft_ifft/start_o" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">start_o</obj_property>
-      <obj_property name="ObjectShortName">start_o</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fft_ifft/xk_re_ifft" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">xk_re_ifft[14:0]</obj_property>
-      <obj_property name="ObjectShortName">xk_re_ifft[14:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fft_ifft/xk_im_ifft" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">xk_im_ifft[14:0]</obj_property>
-      <obj_property name="ObjectShortName">xk_im_ifft[14:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fft_ifft/ifft0/xk_index" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">xk_index[5:0]</obj_property>
-      <obj_property name="ObjectShortName">xk_index[5:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fft_ifft/xk_re_o" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">xk_re_o[14:0]</obj_property>
-      <obj_property name="ObjectShortName">xk_re_o[14:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fft_ifft/xk_im_o" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">xk_im_o[14:0]</obj_property>
-      <obj_property name="ObjectShortName">xk_im_o[14:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fft_ifft/fft0/xn_index" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">xn_index[5:0]</obj_property>
-      <obj_property name="ObjectShortName">xn_index[5:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fft_ifft/dv_o" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">dv_o</obj_property>
-      <obj_property name="ObjectShortName">dv_o</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fft_ifft/i_o" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">i_o[14:0]</obj_property>
-      <obj_property name="ObjectShortName">i_o[14:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fft_ifft/q_o" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">q_o[14:0]</obj_property>
-      <obj_property name="ObjectShortName">q_o[14:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/fft_ifft/xo_index" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">xo_index[5:0]</obj_property>
-      <obj_property name="ObjectShortName">xo_index[5:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="group94" type="group">
+      <obj_property name="label">IFFT_FFT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_module_tb/uut/fft_ifft/start" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">start</obj_property>
+         <obj_property name="ObjectShortName">start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fft_ifft/i_i" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">i_i[7:0]</obj_property>
+         <obj_property name="ObjectShortName">i_i[7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fft_ifft/q_i" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">q_i[7:0]</obj_property>
+         <obj_property name="ObjectShortName">q_i[7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fft_ifft/ifft0/xn_index" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">xn_index[5:0]</obj_property>
+         <obj_property name="ObjectShortName">xn_index[5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fft_ifft/dv_o" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">dv_o</obj_property>
+         <obj_property name="ObjectShortName">dv_o</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fft_ifft/i_o" type="array" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">i_o[21:0]</obj_property>
+         <obj_property name="ObjectShortName">i_o[21:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="label">i_o[13:6]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fft_ifft/q_o" type="array" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">q_o[21:0]</obj_property>
+         <obj_property name="ObjectShortName">q_o[21:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="label">q_o[13:6]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_module_tb/uut/fft_ifft/xo_index" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">xo_index[5:0]</obj_property>
+         <obj_property name="ObjectShortName">xo_index[5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="divider35" type="divider">
       <obj_property name="label">CORDIC</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="BkColor">128 128 255</obj_property>
       <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/cordic0/x0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x0[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/cordic0/y0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">y0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">y0[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/top_module_tb/uut/cordic0/zn" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">zn[3:0]</obj_property>
@@ -276,26 +294,11 @@
    <wvobject fp_name="/top_module_tb/uut/serializer0/data_out" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">data_out[1:0]</obj_property>
       <obj_property name="ObjectShortName">data_out[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/top_module_tb/uut/serializer0/valid_out" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">valid_out</obj_property>
       <obj_property name="ObjectShortName">valid_out</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/serializer0/s_valid" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">s_valid</obj_property>
-      <obj_property name="ObjectShortName">s_valid</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/serializer0/fifo_valid" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">fifo_valid</obj_property>
-      <obj_property name="ObjectShortName">fifo_valid</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/serializer0/s_empty" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">s_empty</obj_property>
-      <obj_property name="ObjectShortName">s_empty</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/serializer0/s_full" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">s_full</obj_property>
-      <obj_property name="ObjectShortName">s_full</obj_property>
    </wvobject>
    <wvobject fp_name="/top_module_tb/uut/serializer0/rst" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">rst</obj_property>
@@ -315,10 +318,6 @@
       <obj_property name="ElementShortName">ce</obj_property>
       <obj_property name="ObjectShortName">ce</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_module_tb/uut/decoder_ready_s" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">decoder_ready_s</obj_property>
-      <obj_property name="ObjectShortName">decoder_ready_s</obj_property>
-   </wvobject>
    <wvobject fp_name="/top_module_tb/uut/viterbi_data_in0" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">viterbi_data_in0[0:0]</obj_property>
       <obj_property name="ObjectShortName">viterbi_data_in0[0:0]</obj_property>
@@ -326,6 +325,10 @@
    <wvobject fp_name="/top_module_tb/uut/viterbi_data_in1" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">viterbi_data_in1[0:0]</obj_property>
       <obj_property name="ObjectShortName">viterbi_data_in1[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/decoder_ready_s" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">decoder_ready_s</obj_property>
+      <obj_property name="ObjectShortName">decoder_ready_s</obj_property>
    </wvobject>
    <wvobject fp_name="/top_module_tb/uut/decoder_out_s" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">decoder_out_s[0:0]</obj_property>
@@ -341,6 +344,10 @@
       <obj_property name="ElementShortName">wr_en</obj_property>
       <obj_property name="ObjectShortName">wr_en</obj_property>
    </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/fifo_out0/wr_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wr_clk</obj_property>
+      <obj_property name="ObjectShortName">wr_clk</obj_property>
+   </wvobject>
    <wvobject fp_name="/top_module_tb/uut/fifo_out0/din" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">din[0:0]</obj_property>
       <obj_property name="ObjectShortName">din[0:0]</obj_property>
@@ -348,10 +355,27 @@
    <wvobject fp_name="/top_module_tb/uut/fifo_out0/dout" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">dout[7:0]</obj_property>
       <obj_property name="ObjectShortName">dout[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/top_module_tb/uut/fifo_out0/rd_en" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">rd_en</obj_property>
       <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/fifo_out0/rd_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/fifo_out0/rd_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rd_clk</obj_property>
+      <obj_property name="ObjectShortName">rd_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/f2hready_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">f2hready_out</obj_property>
+      <obj_property name="ObjectShortName">f2hready_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_module_tb/uut/fifo_out0/empty" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
    </wvobject>
    <wvobject fp_name="/top_module_tb/uut/fifo_out0/full" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">full</obj_property>

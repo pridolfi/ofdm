@@ -133,8 +133,11 @@ BEGIN
 			h2fValid_out<='1';
 			wait for fx2_clk_period;
 		end loop;
-		
 		h2fValid_out<='0';
+		
+		
+		wait for 20 us;	
+		
 		f2hReady_out<='1';
 		
       wait;

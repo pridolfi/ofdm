@@ -159,8 +159,8 @@ architecture top_module_arch of top_module is
          rst : IN  std_logic;
          i_i : IN  std_logic_vector(7 downto 0);
          q_i : IN  std_logic_vector(7 downto 0);
-         i_o : OUT  std_logic_vector(14 downto 0);
-         q_o : OUT  std_logic_vector(14 downto 0);
+         i_o : OUT  std_logic_vector(21 downto 0);
+         q_o : OUT  std_logic_vector(21 downto 0);
          xo_index : OUT  std_logic_vector(5 downto 0);
          dv_o : OUT  std_logic
         );
@@ -191,7 +191,7 @@ architecture top_module_arch of top_module is
 	--FFT -> CORDIC
 	signal i_channel_s,q_channel_s: std_logic_vector (7 downto 0);
 	signal valid_out_mapper_s: std_logic;
-	signal fft_i_s, fft_q_s : std_logic_vector(14 downto 0);
+	signal fft_i_s, fft_q_s : std_logic_vector(21 downto 0);
 	signal fft_valid_out_s : std_logic;	
 	
 	--CORDIC->SERIALIZER
@@ -299,8 +299,8 @@ begin
 				rst=>fx2_rst,
 				valid_in=>fft_valid_out_s,
 				valid_out =>valid_out_cordic_s,
-				x0=>fft_i_s(14 downto 7),
-				y0=>fft_q_s(14 downto 7),
+				x0=>fft_i_s(13 downto 6),
+				y0=>fft_q_s(13 downto 6),
 				zn=> data_out_cordic_s
 			);
 			
@@ -344,7 +344,7 @@ begin
 	fifo_out0 : fifo_16_2clk_1a8
 		PORT MAP(
 			rst    => rst_s,
-			wr_clk => clk_s,
+			wr_clk => clk2x_s,
 			rd_clk => fx2_clk,
 			din    => decoder_out_s,
 			wr_en  => decoder_ready_s,
