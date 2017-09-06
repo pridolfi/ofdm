@@ -30,7 +30,7 @@ USE ieee.std_logic_1164.ALL;
  
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
+USE ieee.numeric_std.ALL;
  
 ENTITY IFFT_FFT_wrapper_tb IS
 END IFFT_FFT_wrapper_tb;
@@ -111,24 +111,29 @@ BEGIN
 		wait for clk_period;
 		start<='0';
 		
-		for I in 0 to 63 loop
-			
-			if (I=31) then
-				i_i<="00010000";
-				q_i<="00000000";
-			elsif (I=32) then
-				i_i<="00010000";
-				q_i<="00000000";
-			else
-				i_i<="00000000";
-				q_i<="00000000";
-			end if;
-			
-		wait for clk_period;
+--		for I in 0 to 63 loop
+--			
+--			i_i<=std_logic_vector(to_unsigned(I,i_i'length));
+--			q_i<=std_logic_vector(to_unsigned(I,q_i'length));
+--						
+--		wait for clk_period;
+--		end loop;
+
+		for J in 0 to 15 loop
+			for I in 0 to 3 loop
+				
+				i_i<=std_logic_vector(to_unsigned(I,i_i'length));
+				q_i<= (others=>'0');
+							
+			wait for clk_period;
+			end loop;
 		end loop;
-	
+--		i_i<="00001010";
+--		q_i<="00001010";
 		wait until dv_o='1';
 		wait until dv_o='0';
+--		i_i<="00000000";
+--		q_i<="00000000";
 		
 
       wait;

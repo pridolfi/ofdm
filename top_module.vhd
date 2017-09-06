@@ -269,7 +269,7 @@ begin
 				data_out => mapper_i_s,
 				start_out => start_ifft_s
 			);
-			
+				
 			fifo_iface_ifft_q : fifo_iface
 			port map(
 				data_in  => q_channel_s,
@@ -299,8 +299,8 @@ begin
 				rst=>fx2_rst,
 				valid_in=>fft_valid_out_s,
 				valid_out =>valid_out_cordic_s,
-				x0=>fft_i_s(7 downto 0),
-				y0=>fft_q_s(7 downto 0),
+				x0=>fft_i_s(14 downto 7),
+				y0=>fft_q_s(14 downto 7),
 				zn=> data_out_cordic_s
 			);
 			

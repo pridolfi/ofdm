@@ -1,27 +1,15 @@
-Running: /home/pablo/programas/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/pablo/work/sdc/tp_final/ofdm/top_module_tb_isim_beh.exe" -prj "/home/pablo/work/sdc/tp_final/ofdm/top_module_tb_beh.prj" "work.top_module_tb" 
+Running: /home/pablo/programas/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/pablo/work/sdc/tp_final/ofdm/IFFT_FFT_wrapper_tb_isim_beh.exe" -prj "/home/pablo/work/sdc/tp_final/ofdm/IFFT_FFT_wrapper_tb_beh.prj" "work.IFFT_FFT_wrapper_tb" 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/ipcore_dir/fifo_16_2clk.vhd" into library work
-Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/ipcore_dir/conv_encoder.vhd" into library work
-Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/ipcore_dir/viterbi_decoder.vhd" into library work
-Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/ipcore_dir/fifo_16_2clk_1a8.vhd" into library work
-Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/ipcore_dir/fifo4_to_2.vhd" into library work
 Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/ipcore_dir/FFT_mod.vhd" into library work
-Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/ipcore_dir/fifo8x64.vhd" into library work
-Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/cordic_iter.vhd" into library work
-Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/serializer.vhd" into library work
-Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/mapper.vhd" into library work
 Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/IFFT_FFT_wrapper.vhd" into library work
-Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/fifo_iface.vhd" into library work
-Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/cordic.vhd" into library work
-Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/top_module.vhd" into library work
-Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/top_module_tb.vhd" into library work
+Parsing VHDL file "/home/pablo/work/sdc/tp_final/ofdm/IFFT_FFT_wrapper_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 268448 KB
-Fuse CPU Usage: 7160 ms
+Fuse Memory Usage: 186140 KB
+Fuse CPU Usage: 4720 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -31,25 +19,6 @@ Compiling package vital_timing
 Compiling package vital_primitives
 Compiling package vpkg
 Compiling package std_logic_arith
-Compiling package std_logic_unsigned
-Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_as [\fifo_generator_v9_3_bhv_as(8,"0...]
-WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/XilinxCoreLib/fifo_generator_v9_3.vhd" Line 632: Range is empty (null range)
-Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_preload0 [\fifo_generator_v9_3_bhv_preload...]
-Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(0,0,5,...]
-Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(0,0,5,"Blan...]
-Compiling architecture fifo_16_2clk_a of entity fifo_16_2clk [fifo_16_2clk_default]
-Compiling package bip_utils_pkg_v2_0
-Compiling package convolution_pack_v7_0
-Compiling architecture behavioral of entity CONVOLUTION_V7_0 [\CONVOLUTION_V7_0(2,7,0,0,1,2,12...]
-WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/XilinxCoreLib/convolution_v7_0.vhd" Line 208: Range is empty (null range)
-Compiling architecture conv_encoder_a of entity conv_encoder [conv_encoder_default]
-Compiling architecture mapper_arch of entity mapper [mapper_default]
-Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_ss [\fifo_generator_v9_3_bhv_ss(7,8,...]
-Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_preload0 [\fifo_generator_v9_3_bhv_preload...]
-Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(1,0,7,...]
-Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(1,0,7,"Blan...]
-Compiling architecture fifo8x64_a of entity fifo8x64 [fifo8x64_default]
-Compiling architecture fifo_iface_arch of entity fifo_iface [fifo_iface_default]
 Compiling package std_logic_signed
 Compiling architecture vcc_v of entity VCC [vcc_default]
 Compiling architecture gnd_v of entity GND [gnd_default]
@@ -67,47 +36,17 @@ Compiling architecture lut3_v of entity LUT3 [\LUT3("11001010")(0,7)\]
 Compiling architecture fdrs_v of entity FDRS [\FDRS('0')\]
 Compiling architecture lut1_v of entity LUT1 [\LUT1("0010")(0,3)\]
 Compiling architecture inv_v of entity INV [inv_default]
-Compiling architecture ramb16_s18_s18_v of entity RAMB16_S18_S18 [\RAMB16_S18_S18:top_module_tb:uu...]
+Compiling architecture ramb16_s18_s18_v of entity RAMB16_S18_S18 [\RAMB16_S18_S18:ifft_fft_wrapper...]
 Compiling architecture lut3_l_v of entity LUT3_L [\LUT3_L("11100100")(0,7)\]
 Compiling architecture srl16e_v of entity SRL16E [\SRL16E("0000000000000000")(0,15...]
-Compiling architecture ramb16_s36_s36_v of entity RAMB16_S36_S36 [\RAMB16_S36_S36:top_module_tb:uu...]
-Compiling architecture structure of entity FFT_mod [\FFT_mod:top_module_tb:uut:fft_i...]
-Compiling architecture ifft_fft_wrapper_arch of entity IFFT_FFT_wrapper [\IFFT_FFT_wrapper:top_module_tb:...]
-Compiling architecture behavioral of entity cordic_iter [\cordic_iter(16,0)\]
-Compiling architecture behavioral of entity cordic_iter [\cordic_iter(16,1)\]
-Compiling architecture behavioral of entity cordic_iter [\cordic_iter(16,2)\]
-Compiling architecture behavioral of entity cordic_iter [\cordic_iter(16,3)\]
-Compiling architecture behavioral of entity cordic_iter [\cordic_iter(16,4)\]
-Compiling architecture behavioral of entity cordic_iter [\cordic_iter(16,5)\]
-Compiling architecture behavioral of entity cordic_iter [\cordic_iter(16,6)\]
-Compiling architecture behavioral of entity cordic_iter [\cordic_iter(16,7)\]
-Compiling architecture behavioral of entity cordic [\cordic(16,8)\]
-Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_as [\fifo_generator_v9_3_bhv_as(4,"0...]
-WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/XilinxCoreLib/fifo_generator_v9_3.vhd" Line 632: Range is empty (null range)
-Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_preload0 [\fifo_generator_v9_3_bhv_preload...]
-Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(0,0,4,...]
-Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(0,0,4,"Blan...]
-Compiling architecture fifo4_to_2_a of entity fifo4_to_2 [fifo4_to_2_default]
-Compiling architecture serializer_arch of entity serializer [serializer_default]
-Compiling architecture ramb16_s36_s36_v of entity RAMB16_S36_S36 [\RAMB16_S36_S36:top_module_tb:uu...]
-Compiling architecture fds_v of entity FDS [\FDS('0')\]
-Compiling architecture muxf8_v of entity MUXF8 [muxf8_default]
-Compiling architecture muxf7_v of entity MUXF7 [muxf7_default]
-Compiling architecture ramb16_s36_s36_v of entity RAMB16_S36_S36 [\RAMB16_S36_S36:top_module_tb:uu...]
-Compiling architecture ram16x1d_v of entity RAM16X1D [\RAM16X1D("0000000000000000")\]
-Compiling architecture buf_v of entity BUF [buf_default]
-Compiling architecture structure of entity viterbi_decoder [\viterbi_decoder:top_module_tb:u...]
-Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_as [\fifo_generator_v9_3_bhv_as(1,"0...]
-WARNING:HDLCompiler:746 - "/build/xfndry10/P.20131013/rtf/vhdl/src/XilinxCoreLib/fifo_generator_v9_3.vhd" Line 632: Range is empty (null range)
-Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(0,0,7,...]
-Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(0,0,7,"Blan...]
-Compiling architecture fifo_16_2clk_1a8_a of entity fifo_16_2clk_1a8 [fifo_16_2clk_1a8_default]
-Compiling architecture top_module_arch of entity top_module [\top_module:top_module_tb:uut:\]
-Compiling architecture behavior of entity top_module_tb
+Compiling architecture ramb16_s36_s36_v of entity RAMB16_S36_S36 [\RAMB16_S36_S36:ifft_fft_wrapper...]
+Compiling architecture structure of entity FFT_mod [\FFT_mod:ifft_fft_wrapper_tb:uut...]
+Compiling architecture ifft_fft_wrapper_arch of entity IFFT_FFT_wrapper [\IFFT_FFT_wrapper:ifft_fft_wrapp...]
+Compiling architecture behavior of entity ifft_fft_wrapper_tb
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 276 VHDL Units
-Built simulation executable /home/pablo/work/sdc/tp_final/ofdm/top_module_tb_isim_beh.exe
-Fuse Memory Usage: 871112 KB
-Fuse CPU Usage: 10600 ms
-GCC CPU Usage: 240 ms
+Compiled 135 VHDL Units
+Built simulation executable /home/pablo/work/sdc/tp_final/ofdm/IFFT_FFT_wrapper_tb_isim_beh.exe
+Fuse Memory Usage: 778508 KB
+Fuse CPU Usage: 6470 ms
+GCC CPU Usage: 190 ms
